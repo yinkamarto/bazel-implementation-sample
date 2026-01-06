@@ -1,0 +1,5 @@
+java_binary(
+    name = "hello_world",
+    srcs = glob(["HelloWorld.java"]),
+    main_class = "com.example2.HelloWorld",
+)

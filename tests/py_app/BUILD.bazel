@@ -1,0 +1,15 @@
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
+
+py_library(
+    name = "py_app",
+    srcs = ["__init__.py"],
+    visibility = ["//:__subpackages__"],
+)
+
+# gazelle:resolve py main.app.numberGuesser.NumberGuesser //main/app:numberGuesser
+
+py_test(
+    name = "number_guesser_test",
+    srcs = ["number_guesser_test.py"],
+    deps = ["//src/main/app"],
+)

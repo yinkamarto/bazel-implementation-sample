@@ -1,0 +1,35 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+
+py_library(
+    name = "app",
+    srcs = [
+        "__init__.py",
+        "analyze.py",
+        "numberGuesser.py",
+    ],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//src/main/app/lib",
+        "@pip//numpy",
+        "@pip//scipy",
+    ],
+)
+
+# gazelle:resolve py main.app.lib.lib.get_int_input //src/main/app/lib:lib
+
+py_binary(
+    name = "numberGuesser",
+    srcs = ["numberGuesser.py"],
+    visibility = ["//:__subpackages__"],
+    deps = ["//src/main/app/lib"],
+)
+
+py_binary(
+    name = "analyze",
+    srcs = ["analyze.py"],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "@pip//numpy",
+        "@pip//scipy",
+    ],
+)
