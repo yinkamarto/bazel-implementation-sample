@@ -1,12 +1,9 @@
-# java_library(
-#     name = "my_lib",
-#     srcs = ["MyClass.java"],
-#     deps = ["@maven//:com_google_guava_guava"],
-# )
+load("@rules_java//java:defs.bzl", "java_binary")
 
 java_binary(
     name = "random_text_generator",
-    srcs = glob(["RandomTextGenerator.java"]),
+    srcs = ["RandomTextGenerator.java"],
     main_class = "com.example1.RandomTextGenerator",
     resources = glob(["resources/*.txt"]),
+    deps = ["//src/main/java/com:shared_lib"],
 )
