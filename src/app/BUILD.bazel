@@ -9,7 +9,7 @@ py_library(
     ],
     visibility = ["//:__subpackages__"],
     deps = [
-        "//src/main/app/lib",
+        "//src/app/lib",
         "@pip//numpy",
         "@pip//scipy",
     ],
@@ -21,7 +21,7 @@ py_binary(
     name = "numberGuesser",
     srcs = ["numberGuesser.py"],
     visibility = ["//:__subpackages__"],
-    deps = ["//src/main/app/lib"],
+    deps = ["//src/app/lib"],
 )
 
 py_binary(

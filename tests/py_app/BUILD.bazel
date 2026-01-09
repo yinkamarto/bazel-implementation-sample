@@ -11,5 +11,5 @@ py_library(
 py_test(
     name = "number_guesser_test",
     srcs = ["number_guesser_test.py"],
-    deps = ["//src/main/app"],
+    deps = ["//src/app"],
 )

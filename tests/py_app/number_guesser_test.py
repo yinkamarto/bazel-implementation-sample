@@ -1,6 +1,6 @@
 import unittest
 
-from src.main.app.numberGuesser import NumberGuesser
+from src.app.numberGuesser import NumberGuesser
 
 class NumberGuesserTest(unittest.TestCase):
     # def test_get_int_input_with_non_numeric(mocker, capsys):

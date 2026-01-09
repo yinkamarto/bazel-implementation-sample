@@ -6,7 +6,7 @@ import random
 # SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 # sys.path.append(os.path.dirname(SCRIPT_DIR))
 
-from src.main.app.lib.lib import get_int_input
+from src.app.lib.lib import get_int_input
 
 class NumberGuesser():
     def run_game(self) -> None:
