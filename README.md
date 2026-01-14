@@ -4,7 +4,7 @@ A simple implementation of Bazel as a build and test automation tool for a monor
 
 ## How to run locally
 1. You can update the python manifest using gazelle: `bazel run gazelle_python_manifest.update`
-2. Build files within the python project can be update using gazelle: `bazel run gazelle`
+2. Build python related files using gazelle: `bazel run gazelle`
 3. Build all targets: `bazel build //...`
 3. You can build and run the python game with `bazel run //src/app:numberGuesser`
 4. You can build and run the analyze code with `bazel run //src/app:analyze`
